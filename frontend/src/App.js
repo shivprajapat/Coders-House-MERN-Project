@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navigation from './components/shared/Navigation/Navigation';
-import Home from './pages/Home/Home';
+import { Home, Register, Login } from './pages';
 
 function App() {
   return (
@@ -8,7 +8,10 @@ function App() {
       <Navigation />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/login' element={<Login />} />
       </Routes>
+
     </BrowserRouter>
   );
 }
