@@ -1,9 +1,32 @@
 import React from 'react'
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 
-const SemiProtectedRoute = ({...rest}) => {
+const SemiProtectedRoute = ({ children, ...rest }) => {
+  const isAuth = true
+  const user = {
+    activated: false
+  }
+
   return (
-    <Route {...rest}></Route>
+    <Route {...rest}
+      render={({ location }) => {
+        return !isAuth ? (<Redirect
+          to={{
+            pathname: "/",
+            state: { from: location }
+          }}
+        />) : (
+          isAuth && !user.activated ? (children) : (
+            <Redirect
+              to={{
+                pathname: "/rooms",
+                state: { from: location }
+              }}
+            />)
+
+        )
+      }}
+    />
   )
 }
 
