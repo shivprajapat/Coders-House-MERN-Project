@@ -1,18 +1,13 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { Fragment } from 'react';
 import Navigation from './components/shared/Navigation/Navigation';
-import { Home, Register, Login } from './pages';
+import MainRoute from './MainRoutes';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Fragment>
       <Navigation />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/login' element={<Login />} />
-      </Routes>
-
-    </BrowserRouter>
+      <MainRoute />
+    </Fragment>
   );
 }
 
