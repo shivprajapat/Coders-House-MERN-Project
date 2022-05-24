@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Redirect } from 'react-router-dom';
 
 const SemiProtectedRoute = ({ children, ...rest }) => {
-  const isAuth = true
+  const isAuth = false
   const user = {
     activated: false
   }
