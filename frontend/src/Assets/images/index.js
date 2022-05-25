@@ -6,4 +6,6 @@ export { default as EmailWhite } from './icons/mail-white.png';
 
 export { default as EmailEmoji } from './icons/email-emoji.png';
 export { default as PhoneRedIcon } from './icons/phone.png';
+export { default as LockEmoji } from './icons/lock-emoji.png';
+
 
