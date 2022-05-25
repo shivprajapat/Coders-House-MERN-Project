@@ -1,9 +1,17 @@
 require('dotenv').config();
 const express = require('express');
+const router = require('./routes');
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('Hello from express Js');
-});
 const PORT = process.env.PORT || 5500;
+
+app.use(express.json());
+
+app.use(router)
+app.use(express.json());
+
+router.get('/', (req, res) => {
+    res.send({ message: 'Hello from express Js' });
+});
+
 app.listen(PORT, () => console.log(`Listening on port http://localhost:${PORT}`));
