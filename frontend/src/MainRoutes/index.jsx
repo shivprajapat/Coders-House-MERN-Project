@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch } from 'react-router-dom';
 import { Home, Authenticate, Activate } from '../pages';
-import Rooms from '../pages/Rooms/Rooms';
+import { Rooms } from '../pages';
 import GuestRoute from './GuestRoute';
 import ProtectedRoute from './ProtectedRoute';
 import SemiProtectedRoute from './SemiProtectedRoute';

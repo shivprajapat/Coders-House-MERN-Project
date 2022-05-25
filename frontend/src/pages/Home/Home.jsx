@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from './home.module.css';
 import { Link, useHistory } from 'react-router-dom';
-import Card from '../../components/shared/Card/Card';
-import Button from '../../components/shared/Button/Button';
+import { Card, Button } from '../../components/shared';
 import { logo } from '../../Assets/images'
 const Home = () => {
     const signInLinkStyle = {

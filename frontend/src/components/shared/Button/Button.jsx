@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './button.module.css';
-import { ArrowForward } from '../../../Assets/images'
+import { IconArrowForward } from '../../../Assets/images'
 
 const Button = ({ text, onClick }) => {
     return (
@@ -8,7 +8,7 @@ const Button = ({ text, onClick }) => {
             <span>{text}</span>
             <img
                 className={styles.arrow}
-                src={ArrowForward}
+                src={IconArrowForward}
                 alt="arrow"
             />
         </button>

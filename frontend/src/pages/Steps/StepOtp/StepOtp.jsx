@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import Card from '../../../components/shared/Card/Card';
-import TextInput from '../../../components/shared/TextInput/TextInput';
-import Button from '../../../components/shared/Button/Button';
+import { Card, TextInput, Button } from '../../../components/shared';
 import styles from './stepOtp.module.css';
-import { LockEmoji } from '../../../Assets/images';
+import { IconLockEmoji } from '../../../Assets/images';
 const StepOtp = () => {
   const [otp, setOtp] = useState('');
   function submit() {
@@ -14,7 +12,7 @@ const StepOtp = () => {
       <div className={styles.cardWrapper}>
         <Card
           title="Enter the code we just texted you"
-          icon={LockEmoji}
+          icon={IconLockEmoji}
         >
           <TextInput
             value={otp}

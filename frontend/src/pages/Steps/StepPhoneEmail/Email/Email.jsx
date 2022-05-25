@@ -1,15 +1,14 @@
 import React, { useState } from 'react'
-import Card from '../../../../components/shared/Card/Card';
-import Button from '../../../../components/shared/Button/Button';
-import styles from '../stepPhoneEmail.module.css';
-import { EmailEmoji } from '../../../../Assets/images';
-import TextInput from '../../../../components/shared/TextInput/TextInput';
+import { Card, TextInput, Button } from '../../../../components/shared';
 
-const Email = ({ onNext}) => {
+import styles from '../stepPhoneEmail.module.css';
+import { IconEmailEmoji } from '../../../../Assets/images';
+
+const Email = ({ onNext }) => {
     const [email, setEmail] = useState('');
 
     return (
-        <Card title="Enter your email id" icon={EmailEmoji}>
+        <Card title="Enter your email id" icon={IconEmailEmoji}>
             <TextInput
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}

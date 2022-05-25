@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
-import Card from '../../../../components/shared/Card/Card';
-import Button from '../../../../components/shared/Button/Button';
+import { Card, TextInput, Button } from '../../../../components/shared';
+
 import styles from '../stepPhoneEmail.module.css';
-import { PhoneRedIcon } from '../../../../Assets/images';
-import TextInput from '../../../../components/shared/TextInput/TextInput';
+import { IconPhone } from '../../../../Assets/images';
 
 const Phone = ({ onNext }) => {
     const [phoneNumber, setPhoneNumber] = useState('');
     return (
-        <Card title="Enter you phone number" icon={PhoneRedIcon}>
+        <Card title="Enter you phone number" icon={IconPhone}>
             <TextInput
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
