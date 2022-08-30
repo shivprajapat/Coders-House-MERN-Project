@@ -20,7 +20,10 @@ class OtpService {
     });
   }
 
-  verifyOtp() {}
+  verifyOtp(hashedOtp, data) {
+    let computedHash = hashService.hashOtp(data);
+    return computedHash === hashedOtp;
+  }
 }
 
 module.exports = new OtpService();
